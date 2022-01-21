@@ -3,10 +3,18 @@
 # 2. Percabangan: langkah melompat jika kondisi terpenuhi
 # 3. Perulangan: mengulang langkah yang sama berkali-kali selama/sampai kondisi terpenuhi
 
-#Sekuensial
-print("Hello World!")
-print("Ibu berkata, \"Pergi ke Toko!\"")
-print("Budy menjawab, \"Baik, apa yang harus saya lakukan di toko?!\"")
-print("Ibu menjawab, \"Beli satu botol susu, dan jika ada telor beli beli 6?\"")
-print("maka budi berangkat ke toko")
-print("Dan mulai berbelanja")
+# Sekuensial
+# print("Hello World!")
+# print("Ibu berkata, \"Pergi ke Toko!\"")
+# print("Budy menjawab, \"Baik, apa yang harus saya lakukan di toko?!\"")
+# print("Ibu menjawab, \"Beli satu botol susu, dan jika ada telor beli beli 6?\"")
+# print("maka budi berangkat ke toko")
+# print("Dan mulai berbelanja")
+
+# Percabangan
+jumlah_botol_susu = 6
+
+if jumlah_botol_susu > 0:
+ print("Budi membeli 1 botol susu")
+else :
+ print("Budi tidak membeli botol susu")
