@@ -36,6 +36,13 @@ del non_fiction_book[::2]
 for i in range(0, len(non_fiction_book)):
   print(non_fiction_book[i])
 
+print('\nCreate new list')
+code_book = ["Python", "Java", "C++", "C#", "JavaScript"]
+new_code_book = code_book[:]
+for i in range(0, len(new_code_book)):
+  print(new_code_book[i])
+
+
 
 
 # semua sintaksis dasar bahasa pemrograman terdiri dari:
