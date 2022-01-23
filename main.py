@@ -1,3 +1,31 @@
+# list is array and dictionary is JSON
+book_list = [ 1, -23, 'Seven Habits', 'How to Influence People', 'First Thinfs First']
+print(book_list)
+
+for book in book_list:
+  print(book)
+book_list.append('The Power of Habit')
+
+for i in range(0, len(book_list)):
+  print(book_list[i])
+
+# clear() delte all element in list
+book_list.clear()
+print(book_list)
+
+books = ['The Power of Habit', 'Seven Habits', 'How to Influence People', 'First Thinfs First']
+books[0] = 'The Power of Habit (2nd Edition)'
+for i in range(0, len(books)):
+  print(books[i])
+# pop() remove from the end and return the value that was removed
+print('\n Remove the last item')
+book_removed = books.pop()
+for i in range(0, len(books)):
+  print(books[i])
+print(f'\n Removed book: {book_removed}')
+
+
+
 # semua sintaksis dasar bahasa pemrograman terdiri dari:
 # 1. Sekuensial: langkah berurutan
 # 2. Percabangan: langkah melompat jika kondisi terpenuhi
@@ -60,21 +88,21 @@
 # print(f'jumlah buku yang sudah dibaca {jumlah_buku_sudah_dibaca}')
 
 #perulangan dengan WHILE LOOP sampai paham
-jumlah_buku = 10
-print('ibu berkata, "Baca semua bukumu!"')
-total_jumlah_baca = 0
-jumlah_buku_sudah_dibaca_dan_dipahami = 0
-print(f'jumlah buku yang sudah dibaca dan dipahami {jumlah_buku_sudah_dibaca_dan_dipahami}')
+# jumlah_buku = 10
+# print('ibu berkata, "Baca semua bukumu!"')
+# total_jumlah_baca = 0
+# jumlah_buku_sudah_dibaca_dan_dipahami = 0
+# print(f'jumlah buku yang sudah dibaca dan dipahami {jumlah_buku_sudah_dibaca_dan_dipahami}')
 
-while total_jumlah_baca < jumlah_buku * 2:
-    total_jumlah_baca = total_jumlah_baca + 1
-    if jumlah_buku_sudah_dibaca_dan_dipahami == 9:
-      print(f"buku ke {jumlah_buku_sudah_dibaca_dan_dipahami + 1} belum paham")
-    else:
-      jumlah_buku_sudah_dibaca_dan_dipahami += 1
-      print(f"Buku ke {jumlah_buku_sudah_dibaca_dan_dipahami} sudah dibaca dan dipahami")
-if jumlah_buku_sudah_dibaca_dan_dipahami == jumlah_buku:
-  print("Buku sudah selesai dibaca dan dipahami")
-else:
-  print(f"tidak semua buku bisa dipahami. Budi hanya bisa memahami {jumlah_buku_sudah_dibaca_dan_dipahami} buku")
-print(f'jumlah buku yang sudah dibaca dan dipahami {jumlah_buku_sudah_dibaca_dan_dipahami}')
+# while total_jumlah_baca < jumlah_buku * 2:
+#     total_jumlah_baca = total_jumlah_baca + 1
+#     if jumlah_buku_sudah_dibaca_dan_dipahami == 9:
+#       print(f"buku ke {jumlah_buku_sudah_dibaca_dan_dipahami + 1} belum paham")
+#     else:
+#       jumlah_buku_sudah_dibaca_dan_dipahami += 1
+#       print(f"Buku ke {jumlah_buku_sudah_dibaca_dan_dipahami} sudah dibaca dan dipahami")
+# if jumlah_buku_sudah_dibaca_dan_dipahami == jumlah_buku:
+#   print("Buku sudah selesai dibaca dan dipahami")
+# else:
+#   print(f"tidak semua buku bisa dipahami. Budi hanya bisa memahami {jumlah_buku_sudah_dibaca_dan_dipahami} buku")
+# print(f'jumlah buku yang sudah dibaca dan dipahami {jumlah_buku_sudah_dibaca_dan_dipahami}')
