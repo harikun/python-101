@@ -1,17 +1,17 @@
 # list is array and dictionary is JSON
-book_list = [ 1, -23, 'Seven Habits', 'How to Influence People', 'First Thinfs First']
-print(book_list)
+# book_list = [ 1, -23, 'Seven Habits', 'How to Influence People', 'First Thinfs First']
+# print(book_list)
 
-for book in book_list:
-  print(book)
-book_list.append('The Power of Habit')
+# for book in book_list:
+#   print(book)
+# book_list.append('The Power of Habit')
 
-for i in range(0, len(book_list)):
-  print(book_list[i])
+# for i in range(0, len(book_list)):
+#   print(book_list[i])
 
 # clear() delte all element in list
-book_list.clear()
-print(book_list)
+# book_list.clear()
+# print(book_list)
 
 books = ['The Power of Habit', 'Seven Habits', 'How to Influence People', 'First Thinfs First']
 books[0] = 'The Power of Habit (2nd Edition)'
@@ -23,6 +23,18 @@ book_removed = books.pop()
 for i in range(0, len(books)):
   print(books[i])
 print(f'\n Removed book: {book_removed}')
+
+#list comprehension
+fiction_book = ["Harry Potter", "Lord of the Rings", "The Hobbit"]
+# tanda kurung kurawal artinya start dan end [start:end]
+del fiction_book[:]
+for i in range(0, len(fiction_book)):
+  print(fiction_book[i])
+# tanda kurung kurawal artinya start dan end [start:end:step]
+non_fiction_book = ["The Power of Habit", "Seven Habits", "How to Influence People", "First Thinfs First", "The 4-Hour Workweek"]
+del non_fiction_book[::2]
+for i in range(0, len(non_fiction_book)):
+  print(non_fiction_book[i])
 
 
 
