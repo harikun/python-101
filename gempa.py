@@ -1,5 +1,6 @@
 # earth quake detection
-
+from bs4 import BeautifulSoup
+# beautiful soup hanya mengolah data tidak mengambil
 def data_extraction():
 
   """
@@ -11,6 +12,9 @@ def data_extraction():
   epicenter: Pusat gempa berada di laut 139 km Barat Laut Maumere
   feel: Dirasakan (Skala MMI): II Pulau Kalaotoa
   """
+  soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+  print(soup.prettify())
+
   hasil = dict()
   hasil['date'] = '23 Januari 2022'
   hasil['time'] = '12:20:13 WIB'
@@ -34,8 +38,8 @@ def show_data(result):
   print(f"Dirasakan: {result['feel']}")
 
 
-if __name__ == '__main__':
-  print("Main Aplication")
-  result = data_extraction()
-  print(result)
-  show_data(result)
+# if __name__ == '__main__':
+print("Main Aplication")
+result = data_extraction()
+print(result)
+show_data(result)
