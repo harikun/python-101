@@ -1,6 +1,8 @@
 # earth quake detection
 from bs4 import BeautifulSoup
 # beautiful soup hanya mengolah data tidak mengambil
+import requests
+# request untuk mengambil data dari website
 def data_extraction():
 
   """
@@ -12,21 +14,34 @@ def data_extraction():
   epicenter: Pusat gempa berada di laut 139 km Barat Laut Maumere
   feel: Dirasakan (Skala MMI): II Pulau Kalaotoa
   """
-  soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
-  print(soup.prettify())
+  try:
+    content = requests.get("https://www.bmkg.go.id/")
+  except Exception:
+    print("Tidak dapat mengambil data")
+    return None
+  if content.status_code == 200:
+    print(content.text)
+    # soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+    # print(soup.prettify())
 
-  hasil = dict()
-  hasil['date'] = '23 Januari 2022'
-  hasil['time'] = '12:20:13 WIB'
-  hasil['magnitude'] = 3.8
-  hasil['deep'] = '9 km'
-  hasil['location'] = {'LS':7.41, 'BT': 121.87}
-  hasil['epicenter'] = 'Pusat gempa berada di laut 139 km Barat Laut Maumere'
-  hasil['feel'] = 'Dirasakan (Skala MMI): II Pulau Kalaotoa'
-  return hasil
+    hasil = dict()
+    hasil['date'] = '23 Januari 2022'
+    hasil['time'] = '12:20:13 WIB'
+    hasil['magnitude'] = 3.8
+    hasil['deep'] = '9 km'
+    hasil['location'] = {'LS':7.41, 'BT': 121.87}
+    hasil['epicenter'] = 'Pusat gempa berada di laut 139 km Barat Laut Maumere'
+    hasil['feel'] = 'Dirasakan (Skala MMI): II Pulau Kalaotoa'
+    return hasil
+  else:
+    print("Tidak dapat mengambil data")
+    return None
 
 
 def show_data(result):
+  if result is None:
+    print("Tidak dapat mengambil data")
+    return
   print("Gempa terakhir yang terjadi di Indonesia")
   print("======================================")
   print(f"Tanggal: {result['date']}")
