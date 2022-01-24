@@ -1,13 +1,37 @@
 #Dictionary = JSON
 users = {
-  'id': 1,
-  'name': 'Leanne Graham',
-  'username': 'Bret',
-  'email': 'Sincere@april.biz'
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "9299-3847",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  }
 }
+
 print(users)
-print(users['name'])
-print(users['email'])
+print(type(users))
+
+import json
+json_str = json.dumps(users)
+print(json_str)
+print(type(json_str))
+# open file and write json_str to file
+with open('users.json', 'w') as file:
+  json.dump(users, file)
+
+# print(users["name"])
+# print(users["email"])
+# print(users["address"])
+# print(users["address"]["city"])
+# print(users["address"]["geo"]["lat"])
 
 # list is array and dictionary is JSON
 # book_list = [ 1, -23, 'Seven Habits', 'How to Influence People', 'First Thinfs First']
