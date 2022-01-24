@@ -1,3 +1,14 @@
+#Dictionary = JSON
+users = {
+  'id': 1,
+  'name': 'Leanne Graham',
+  'username': 'Bret',
+  'email': 'Sincere@april.biz'
+}
+print(users)
+print(users['name'])
+print(users['email'])
+
 # list is array and dictionary is JSON
 # book_list = [ 1, -23, 'Seven Habits', 'How to Influence People', 'First Thinfs First']
 # print(book_list)
@@ -13,34 +24,34 @@
 # book_list.clear()
 # print(book_list)
 
-books = ['The Power of Habit', 'Seven Habits', 'How to Influence People', 'First Thinfs First']
-books[0] = 'The Power of Habit (2nd Edition)'
-for i in range(0, len(books)):
-  print(books[i])
-# pop() remove from the end and return the value that was removed
-print('\n Remove the last item')
-book_removed = books.pop()
-for i in range(0, len(books)):
-  print(books[i])
-print(f'\n Removed book: {book_removed}')
+# books = ['The Power of Habit', 'Seven Habits', 'How to Influence People', 'First Thinfs First']
+# books[0] = 'The Power of Habit (2nd Edition)'
+# for i in range(0, len(books)):
+#   print(books[i])
+# # pop() remove from the end and return the value that was removed
+# print('\n Remove the last item')
+# book_removed = books.pop()
+# for i in range(0, len(books)):
+#   print(books[i])
+# print(f'\n Removed book: {book_removed}')
 
-#list comprehension
-fiction_book = ["Harry Potter", "Lord of the Rings", "The Hobbit"]
-# tanda kurung kurawal artinya start dan end [start:end]
-del fiction_book[:]
-for i in range(0, len(fiction_book)):
-  print(fiction_book[i])
-# tanda kurung kurawal artinya start dan end [start:end:step]
-non_fiction_book = ["The Power of Habit", "Seven Habits", "How to Influence People", "First Thinfs First", "The 4-Hour Workweek"]
-del non_fiction_book[::2]
-for i in range(0, len(non_fiction_book)):
-  print(non_fiction_book[i])
+# #list comprehension
+# fiction_book = ["Harry Potter", "Lord of the Rings", "The Hobbit"]
+# # tanda kurung kurawal artinya start dan end [start:end]
+# del fiction_book[:]
+# for i in range(0, len(fiction_book)):
+#   print(fiction_book[i])
+# # tanda kurung kurawal artinya start dan end [start:end:step]
+# non_fiction_book = ["The Power of Habit", "Seven Habits", "How to Influence People", "First Thinfs First", "The 4-Hour Workweek"]
+# del non_fiction_book[::2]
+# for i in range(0, len(non_fiction_book)):
+#   print(non_fiction_book[i])
 
-print('\nCreate new list')
-code_book = ["Python", "Java", "C++", "C#", "JavaScript"]
-new_code_book = code_book[:]
-for i in range(0, len(new_code_book)):
-  print(new_code_book[i])
+# print('\nCreate new list')
+# code_book = ["Python", "Java", "C++", "C#", "JavaScript"]
+# new_code_book = code_book[:]
+# for i in range(0, len(new_code_book)):
+#   print(new_code_book[i])
 
 
 
